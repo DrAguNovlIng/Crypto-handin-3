@@ -8,9 +8,6 @@ print("length of z* is ", len(z_star))
 def affine_encrypt(a, b, p):
     return (a * p + b) % 26
 
-def calculate_entropy(p):
-    return p * log2(1/p)
-
 unique_keys = []
 total_keys: int = 0
 
@@ -24,5 +21,3 @@ for plaintext_letter in range(26):
 
 print("total amount of keys", total_keys)
 print("amount of unique keys", len(unique_keys))
-print("H(K|C) = ", 12*calculate_entropy(1/12))
-print("H(K|P,C) = ",total_keys * calculate_entropy(1/total_keys))
