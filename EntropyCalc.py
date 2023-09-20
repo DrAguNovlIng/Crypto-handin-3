@@ -1,4 +1,4 @@
-from math import gcd, log2
+from math import gcd
 
 z_star = [i for i in range(26) if gcd(i, 26) == 1]
 
